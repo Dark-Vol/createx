@@ -1,0 +1,26 @@
+import ListItems from '@/pages/homepage/chunk/advantages/ListItems';
+import UILink from '@/UI/link/UILink';
+
+import advantagesIllustration from '@public/homepage/advantages/advantages-bg.png';
+
+const Advantages = () => {
+  return (
+    <div className="my-[180px]">
+      <div className="container">
+        <div className="flex justify-between">
+          <div>
+            <img src={advantagesIllustration} alt="Advantages Illustration" />
+          </div>
+          <div className="basis-[390px]">
+            <h4 className="subtitle">Who we are</h4>
+            <h2 className="title">Why Createx?</h2>
+            <ListItems />
+            <UILink isBg={true} whoElem="regular" link="about" title="More about us" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Advantages;
