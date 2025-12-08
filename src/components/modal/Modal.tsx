@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 
+import './Modal.scss';
+
 const Modal = () => {
   return (
-    <div className="flex gap-1.5 font-bold leading-[1.6]">
-      <Link to="login" className="hover:text-primary hover:scale-105">
+    <div className="modal-links">
+      <Link to="login" className="modal-link">
         Log in
       </Link>
-      <span>/</span>
-      <Link to="register" className="hover:text-primary hover:scale-105">
+      <span className="modal-separator">/</span>
+      <Link to="register" className="modal-link">
         Register
       </Link>
     </div>
