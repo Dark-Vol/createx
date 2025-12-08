@@ -1,11 +1,13 @@
 import CoursesItem from '@/pages/homepage/chunk/courses/CoursesItem';
 
-import CoursesItemImage1 from '@public/homepage/courses/courses-person-1.png';
-import CoursesItemImage2 from '@public/homepage/courses/courses-person-2.png';
-import CoursesItemImage3 from '@public/homepage/courses/courses-person-3.png';
-import CoursesItemImage4 from '@public/homepage/courses/courses-person-4.png';
-import CoursesItemImage5 from '@public/homepage/courses/courses-person-5.png';
-import CoursesItemImage6 from '@public/homepage/courses/courses-person-6.png';
+const CoursesItemImage1 = '/homepage/courses/courses-person-1.png';
+const CoursesItemImage2 = '/homepage/courses/courses-person-2.png';
+const CoursesItemImage3 = '/homepage/courses/courses-person-3.png';
+const CoursesItemImage4 = '/homepage/courses/courses-person-4.png';
+const CoursesItemImage5 = '/homepage/courses/courses-person-5.png';
+const CoursesItemImage6 = '/homepage/courses/courses-person-6.png';
+
+import './CoursesItems.scss';
 
 const CoursesItems = () => {
   const dataCourses = [
@@ -54,7 +56,7 @@ const CoursesItems = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-[30px]">
+    <div className="courses-grid-container">
       {dataCourses.map((course, index) => (
         <CoursesItem key={index} course={course} />
       ))}
