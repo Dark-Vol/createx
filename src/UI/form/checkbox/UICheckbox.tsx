@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import { ISignInFormInput, ISignUpFormInput } from '@/types/form/form.types';
 
-import styles from './UICheckbox.module.css';
+import './UICheckbox.scss';
 
 interface UICheckboxProps {
   title: string;
@@ -14,34 +14,32 @@ interface UICheckboxProps {
 const UICheckbox = ({ title, register }: UICheckboxProps) => {
   const [isChecked, setIsChecked] = useState(false);
   const { pathname } = useLocation();
-  const fieldName = pathname === '/login' ? 'mailing' : 'remember';
 
   return (
     <div>
-      <label
-        htmlFor="checkbox"
-        className="pl-8 relative inline-block leading-[1] cursor-pointer select-none group/edit"
-      >
-        <div className="h-8 flex items-center">
-          <div
-            className={`${styles['checkbox-list']} ${
-              isChecked ? 'bg-primary border-primary' : ''
-            }`}
-          >
-            <span className={isChecked ? 'text-white' : 'hidden'}>&#10004;</span>
+      <label htmlFor="checkbox" className="ui-checkbox-label">
+        <div className="ui-checkbox-container">
+          <div className={`ui-checkbox-list ${isChecked ? 'ui-checkbox-checked' : ''}`}>
+            <span className={isChecked ? 'ui-checkbox-checkmark' : 'ui-checkbox-checkmark-hidden'}>&#10004;</span>
           </div>
           <input
-            {...(register as any)(fieldName, {
-              onChange(e: ChangeEvent<HTMLInputElement>) {
-                setIsChecked(e.target.checked);
-              },
-            })}
+            {...(pathname === '/login'
+              ? (register as UseFormRegister<ISignInFormInput>)('mailing', {
+                  onChange(e: ChangeEvent<HTMLInputElement>) {
+                    setIsChecked(e.target.checked);
+                  },
+                })
+              : (register as UseFormRegister<ISignUpFormInput>)('remember', {
+                  onChange(e: ChangeEvent<HTMLInputElement>) {
+                    setIsChecked(e.target.checked);
+                  },
+                }))}
             checked={isChecked}
             type="checkbox"
             id="checkbox"
-            className="hidden"
+            className="ui-checkbox-input"
           />
-          <span className="duration-200 group-hover/edit:scale-105">{title}</span>
+          <span className="ui-checkbox-text">{title}</span>
         </div>
       </label>
     </div>
