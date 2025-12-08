@@ -1,5 +1,7 @@
 import EventsItem from '@/pages/homepage/chunk/events/EventsItem';
 
+import './EventsItems.scss';
+
 const EventsItems = () => {
   const eventsInfo = [
     {
@@ -26,7 +28,7 @@ const EventsItems = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-6 mt-10 mb-15">
+    <div className="events-list">
       {eventsInfo.map((event, index) => (
         <EventsItem event={event} key={index} />
       ))}
