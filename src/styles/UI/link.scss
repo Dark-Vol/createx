@@ -1,0 +1,53 @@
+.ui-link {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+.ui-link-large {
+  font-size: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.ui-link-regular {
+  font-size: 14px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.ui-link-small {
+  font-size: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.ui-link-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+}
+
+.ui-link-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+
+
+

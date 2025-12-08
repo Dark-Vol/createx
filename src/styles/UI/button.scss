@@ -1,0 +1,23 @@
+.ui-button {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 14px 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+
+  &:hover {
+    background-color: var(--hover-bg);
+  }
+}
+
+
+
+
