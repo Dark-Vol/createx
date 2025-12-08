@@ -1,0 +1,37 @@
+.about-page-hero {
+  background-color: var(--color-main);
+  padding-top: 126px;
+  padding-bottom: 80px;
+  font-size: 16px;
+}
+
+.about-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.about-title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
+.about-description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--color-gray-700);
+  max-width: 600px;
+}
+
+.about-statistics {
+  background-color: var(--color-gray-100);
+  padding: 80px 0;
+}
+
+
+
+
