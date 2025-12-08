@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+// Variables
+@import "./variables";
+
+// Global styles
+@import "./global";
+
+// Components styles
+@import "./components/header";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/navbar";
+
+// Pages styles
+@import "./pages/homepage";
+@import "./pages/courses";
+@import "./pages/blog";
+@import "./pages/contacts";
+@import "./pages/about-us";
+@import "./pages/events";
+
+// UI Components
+@import "./UI/button";
+@import "./UI/input";
+@import "./UI/checkbox";
+@import "./UI/link";
+
+
+
+
