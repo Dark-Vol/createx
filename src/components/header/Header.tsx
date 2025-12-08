@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Logo from '@components/logo/Logo';
-import Navbar from '@components/navbar/Navbar';
 import Modal from '@components/modal/Modal';
+import Navbar from '@components/navbar/Navbar';
 import UILink from '@/UI/link/UILink';
 import SVGHandler from '@/utilities/SVGHandler';
 import useIsCorrectPath from '@/hooks/useCorrectPath';
 
-import Profile from '@public/icons/profile-icon.svg?react';
+import Profile from '@/assets/icons/profile-icon.svg?react';
+
+import './Header.scss';
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -19,18 +21,18 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header id="header" className={`py-5 ${isCorrectPath ? 'bg-main' : 'bg-white'}`}>
+    <header id="header" className={`header ${isCorrectPath ? 'header-main' : 'header-white'}`}>
       <div className="container">
-        <div className="flex justify-between text-base">
-          <div className="flex items-center">
+        <div className="header-container">
+          <div className="header-left">
             <Logo />
             <Navbar />
           </div>
-          <div className="flex gap-9 items-center">
+          <div className="header-right">
             <div>
               <UILink isBg={true} whoElem="large" link="mailto:martin6175903@yandex.ru" title="Get consultation" />
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="header-actions">
               <SVGHandler hoverBG="primary">
                 <Profile />
               </SVGHandler>
