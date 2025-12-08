@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import ModalForm from '@components/forms/ModalForm';
 import { IModalProps } from '@/types/modal.types';
 
+import './ModalWrapper.scss';
+
 const ModalWrapper = ({ isOpenModal, setIsOpenModal }: IModalProps) => {
   const navigate = useNavigate();
   const [isMouseDownElemModal, setIsMouseDownElemModal] = useState(false);
@@ -34,7 +36,7 @@ const ModalWrapper = ({ isOpenModal, setIsOpenModal }: IModalProps) => {
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onClick={handleCloseModal}
-      className={`${isOpenModal ? 'modal' : 'hidden'} flex items-center justify-center`}
+      className={isOpenModal ? 'modal' : 'modal-hidden'}
     >
       <ModalForm isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />
     </div>
