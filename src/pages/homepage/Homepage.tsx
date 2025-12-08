@@ -1,33 +1,36 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-import { IModalProps } from '@/types/modal.types';
-import Advantages from '@/pages/homepage/chunk/advantages/Advantages';
-import Benefits from '@/pages/homepage/chunk/benefits/Benefits';
-import Certificate from '@/pages/homepage/chunk/certificate/Certificate';
-import Courses from '@/pages/homepage/chunk/courses/Courses';
-import Events from '@/pages/homepage/chunk/events/Events';
-import Studying from '@/pages/homepage/chunk/studying/Studying';
-import Team from '@/pages/homepage/chunk/team/Team';
+import { IModalProps } from '@/types/modal.types.ts';
+import Studying from '@/pages/homepage/chunk/studying/Studying.tsx';
+import Advantages from '@/pages/homepage/chunk/advantages/Advantages.tsx';
+import Courses from '@/pages/homepage/chunk/courses/Courses.tsx';
+import Benefits from '@/pages/homepage/chunk/benefits/Benefits.tsx';
+import Events from '@/pages/homepage/chunk/events/Events.tsx';
+import Certificate from '@/pages/homepage/chunk/certificate/Certificate.tsx';
+import Team from '@/pages/homepage/chunk/team/Team.tsx';
 
 const Homepage = ({ setIsOpenModal }: IModalProps) => {
-  const { pathname } = useLocation();
+
+  const {pathname} = useLocation();
 
   useEffect(() => {
-    if (pathname === '/login' || pathname === '/register') {
+    if (pathname === '/login') {
       setIsOpenModal(true);
     }
-  }, [pathname, setIsOpenModal]);
+    if (pathname === '/register') {
+      setIsOpenModal(true);
+    }
+  }, [pathname]);
 
   return (
     <div>
-      <Studying />
-      <Advantages />
-      <Courses />
-      <Benefits />
-      <Events />
-      <Certificate />
-      <Team />
+      <Studying/>
+      <Advantages/>
+      <Courses/>
+      <Benefits/>
+      <Events/>
+      <Certificate/>
+      <Team/>
     </div>
   );
 };
