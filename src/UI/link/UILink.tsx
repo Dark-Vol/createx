@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import styles from './UILink.module.css';
+import './UILink.scss';
 
 interface UILinkProps {
   isBg: boolean;
@@ -11,14 +11,11 @@ interface UILinkProps {
 }
 
 const UILink = ({ isBg, whoElem, link, title, otherProperties }: UILinkProps) => {
-  const sizeClasses =
-    whoElem === 'large' ? 'text-base px-10' : whoElem === 'regular' ? 'text-sm px-8' : 'text-xs px-6';
-  const bgClasses = isBg
-    ? 'bg-primary text-white border-primary hover:bg-hover-bg'
-    : 'bg-transparent border-primary text-primary hover:bg-primary hover:text-white';
+  const sizeClass = whoElem === 'large' ? 'ui-link-large' : whoElem === 'regular' ? 'ui-link-regular' : 'ui-link-small';
+  const variantClass = isBg ? 'ui-link-primary' : 'ui-link-outline';
 
   return (
-    <Link to={link} className={`${styles.link} ${sizeClasses} ${bgClasses} ${otherProperties || ''}`}>
+    <Link to={link} className={`ui-link ${sizeClass} ${variantClass} ${otherProperties || ''}`}>
       {title}
     </Link>
   );
