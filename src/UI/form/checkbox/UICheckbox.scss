@@ -1,0 +1,59 @@
+@import "../../../styles/UI/checkbox";
+
+.ui-checkbox-label {
+  padding-left: 32px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ui-checkbox-container {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.ui-checkbox-list {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: var(--color-gray-400);
+  width: 24px;
+  height: 24px;
+  padding: 4px 3px;
+  left: 0;
+  top: calc(50% - 12px);
+  line-height: 1;
+}
+
+.ui-checkbox-checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.ui-checkbox-checkmark {
+  color: var(--color-white);
+}
+
+.ui-checkbox-checkmark-hidden {
+  display: none;
+}
+
+.ui-checkbox-input {
+  display: none;
+}
+
+.ui-checkbox-text {
+  transition: transform 0.2s ease;
+
+  .ui-checkbox-label:hover & {
+    transform: scale(1.05);
+  }
+}
+
