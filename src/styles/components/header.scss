@@ -1,0 +1,36 @@
+.header {
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+
+  &.header-main {
+    background-color: var(--color-main);
+  }
+
+  &.header-white {
+    background-color: var(--color-white);
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
