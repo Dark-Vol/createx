@@ -2,24 +2,24 @@ import PlayButton from '@/pages/homepage/chunk/studying/PlayButton';
 import Statistics from '@/pages/homepage/chunk/studying/statistics/Statistics';
 import UILink from '@/UI/link/UILink';
 
-import StudyingIllustration from '@public/homepage/studying/studying-bg.svg?react';
+import StudyingIllustration from '@/assets/homepage/studying/studying-bg.svg?react';
+
+import './Studying.scss';
 
 const Studying = () => {
   return (
-    <div className="bg-main pt-[126px] text-base">
+    <div className="studying-section">
       <div className="container">
-        <div className="flex justify-between">
-          <div className="basis-[496px] pt-4">
+        <div className="studying-content">
+          <div className="studying-left">
             <PlayButton />
-            <h1 className="font-black text-[64px] leading-[1.3] tracking-wide mt-5 mb-15">
-              Enjoy studying with Createx Online Courses
-            </h1>
-            <div className="flex gap-6">
+            <h1 className="studying-title">Enjoy studying with Createx Online Courses</h1>
+            <div className="studying-links">
               <UILink isBg={false} whoElem="large" link="about" title="About Us" />
               <UILink isBg={true} whoElem="large" link="courses" title="Export courses" />
             </div>
           </div>
-          <div>
+          <div className="studying-illustration">
             <StudyingIllustration />
           </div>
         </div>
