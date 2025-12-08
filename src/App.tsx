@@ -1,23 +1,20 @@
-import { createContext, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import ModalWrapper from '@components/modal/ModalWrapper';
-
-import Homepage from './pages/homepage/Homepage';
-import AboutUs from '@/pages/about-us/AboutUs';
-import Blog from './pages/blog/Blog';
-import Contacts from './pages/contacts/Contacts';
-import Course from './pages/course/Course';
-import Courses from './pages/courses/Courses';
-import Event from './pages/event/Event';
-import EventsGridView from './pages/events-grid-view/EventsGridView';
-import EventsListView from './pages/events-list-view/EventsListView';
-import SinglePost from './pages/single-post/SinglePost';
-import NotFound from './pages/not-found/NotFound';
-
-import { IModalProps } from '@/types/modal.types';
+import Homepage from './pages/homepage/Homepage.tsx';
+import AboutUs from '@/pages/about-us/AboutUs.tsx';
+import Blog from './pages/blog/Blog.tsx';
+import Contacts from './pages/contacts/Contacts.tsx';
+import Course from './pages/course/Course.tsx';
+import Courses from './pages/courses/Courses.tsx';
+import Event from './pages/event/Event.tsx';
+import EventsGridView from './pages/events-grid-view/EventsGridView.tsx';
+import EventsListView from './pages/events-list-view/EventsListView.tsx';
+import SinglePost from './pages/single-post/SinglePost.tsx';
+import NotFound from './pages/not-found/NotFound.tsx';
+import Header from './components/header/Header.tsx';
+import Footer from './components/footer/Footer.tsx';
+import { createContext, useEffect, useState } from 'react';
+import { IModalProps } from '@/types/modal.types.ts';
+import ModalWrapper from '@components/modal/ModalWrapper.tsx';
 
 export const ModalContext = createContext<IModalProps | null>(null);
 
