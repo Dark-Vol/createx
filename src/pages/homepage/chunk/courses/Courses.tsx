@@ -1,12 +1,14 @@
 import CoursesItems from '@/pages/homepage/chunk/courses/CoursesItems';
 import UILink from '@/UI/link/UILink';
 
+import './Courses.scss';
+
 const Courses = () => {
   return (
-    <div className="mb-[180px]">
+    <div className="courses-section">
       <div className="container">
         <div>
-          <div className="flex items-end justify-between mb-15">
+          <div className="courses-header">
             <div>
               <h4 className="subtitle">Ready to learn?</h4>
               <h2 className="title">Featured Courses</h2>
