@@ -1,0 +1,16 @@
+@import "../../../styles/UI/button";
+
+.ui-button-wrapper {
+  position: relative;
+}
+
+.ui-button-error {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  line-height: 1;
+  color: var(--color-danger);
+  font-size: 14px;
+  user-select: none;
+}
+
