@@ -1,0 +1,22 @@
+.modal-links {
+  display: flex;
+  gap: 6px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.modal-link {
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--color-primary);
+    transform: scale(1.05);
+  }
+}
+
+.modal-separator {
+  color: var(--color-gray-600);
+}
+
+
+
