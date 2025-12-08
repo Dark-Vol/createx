@@ -7,20 +7,22 @@ import TeamItems from '@/pages/homepage/chunk/team/TeamItems';
 // @ts-ignore
 import 'swiper/css';
 
+import './Team.scss';
+
 const Team = () => {
   const swiper = useSwiper();
 
   return (
-    <section className="pt-[166px] pb-[180px] bg-gray-200">
+    <section className="team-section">
       <div className="container">
         <h4 className="subtitle">Best tutors are all here</h4>
         <h2 className="title">Meet our team</h2>
-        <div className="relative mt-15">
-          <div className="absolute -top-[72px] right-0">
-            <button onClick={() => swiper.slidePrev()}>
+        <div className="team-wrapper">
+          <div className="team-controls">
+            <button onClick={() => swiper.slidePrev()} className="team-button">
               <ArrowLeft />
             </button>
-            <button onClick={() => swiper.slideNext()}>
+            <button onClick={() => swiper.slideNext()} className="team-button">
               <ArrowRight />
             </button>
           </div>
