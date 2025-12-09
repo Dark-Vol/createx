@@ -1,5 +1,5 @@
-@import "../../styles/pages/about-us";
-@import "../../styles/pages/homepage";
+@use "@/styles/pages/about-us";
+@use "@/styles/pages/homepage";
 
 .about-breadcrumb-separator {
   color: var(--color-gray-600);
